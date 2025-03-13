@@ -15,7 +15,7 @@ export default function Home() {
     setResponse(null);
 
     try {
-      const res = await fetch("https://b73a-2804-1b2-11c0-4927-981e-c145-dd10-a820.ngrok-free.app/chatbot", {
+      const res = await fetch("https://d277-2804-1b2-11c0-4927-8456-6eb7-1faf-fc90.ngrok-free.app/chatbot", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ question }),
