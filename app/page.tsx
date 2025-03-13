@@ -15,7 +15,7 @@ export default function Home() {
     setResponse(null);
 
     try {
-      const res = await fetch("http://localhost:5000/chatbot", {
+      const res = await fetch("https://b73a-2804-1b2-11c0-4927-981e-c145-dd10-a820.ngrok-free.app/chatbot", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ question }),
@@ -33,12 +33,12 @@ export default function Home() {
   return (
     <div className="flex flex-col items-center min-h-screen bg-gradient-to-br from-blue-500 to-purple-600 text-white p-6">
       {/* LOGO */}
-      <Image src="/chatbot-logo.svg" alt="Chatbot Logo" width={120} height={120} />
+      <Image src="/logo.png" alt="Chatbot Logo" width={120} height={120} />
       
       {/* TÍTULO */}
-      <h1 className="text-3xl sm:text-5xl font-bold mt-4 text-center">EduBot - Assistente Escolar do Colégio do Sol</h1>
+      <h1 className="text-3xl sm:text-5xl font-bold mt-4 text-center">EduBot - Assistente Escolar</h1>
       <p className="text-lg sm:text-xl text-center mt-2 opacity-90">
-        Tire suas dúvidas sobre a escola, horários, regras e muito mais!
+        Tire suas dúvidas sobre a escola, horários, regras e muito mais.
       </p>
 
       {/* CAMPO DE PERGUNTA */}
