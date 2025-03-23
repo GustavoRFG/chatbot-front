@@ -16,7 +16,6 @@ export default function Home() {
 
     try {
       const res = await fetch("https://5faf-177-18-17-29.ngrok-free.app/chatbot", {
-      //const res = await fetch("http://localhost:5001/chatbot", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ question }),
@@ -37,9 +36,14 @@ export default function Home() {
       <Image src="/logo.png" alt="Chatbot Logo" width={120} height={120} />
       
       {/* TÍTULO */}
-      <h1 className="text-3xl sm:text-5xl font-bold mt-4 text-center">EduBot - Assistente Escolar</h1>
+      <h1 className="text-3xl sm:text-5xl font-bold mt-4 text-center">EducBot - Assistente Escolar</h1>
       <p className="text-lg sm:text-xl text-center mt-2 opacity-90">
         Tire suas dúvidas sobre a escola, horários, regras e muito mais.
+      </p>
+
+      {/* ORIENTAÇÃO SIMPLES */}
+      <p className="mt-4 text-center text-sm sm:text-lg opacity-80">
+        Digite sua pergunta sobre o horário das aulas, matrícula, atividades ou qualquer outra dúvida escolar.
       </p>
 
       {/* CAMPO DE PERGUNTA */}
@@ -48,9 +52,11 @@ export default function Home() {
           type="text"
           value={question}
           onChange={(e) => setQuestion(e.target.value)}
-          placeholder="Digite sua pergunta..."
+          placeholder="Exemplo: 'Qual o horário das aulas?'"
           className="w-full p-3 rounded-xl text-black text-lg focus:outline-none"
         />
+
+        
         <button
           onClick={sendQuestion}
           className="mt-3 px-6 py-3 bg-yellow-500 hover:bg-yellow-600 transition rounded-xl font-bold"
@@ -70,8 +76,18 @@ export default function Home() {
         )}
       </div>
 
+      {/* BOTÃO DE AJUDA/ORIENTAÇÃO DETALHADA */}
+      <div className="mt-6">
+        <button
+          onClick={() => alert('Para interagir com o EducBot, basta digitar uma pergunta. Por exemplo, você pode perguntar sobre os horários de aula, a política de uso de celular, ou sobre eventos escolares. Se você tiver dificuldades, estamos aqui para ajudar!')}
+          className="px-6 py-3 bg-blue-600 hover:bg-blue-700 transition rounded-xl font-bold"
+        >
+          Como usar o EducBot?
+        </button>
+      </div>
+
       {/* RODAPÉ */}
-      <footer className="mt-8 text-sm opacity-80">© {new Date().getFullYear()} EduBot - Colégio do Sol</footer>
+      <footer className="mt-8 text-sm opacity-80">© {new Date().getFullYear()} EducBot - Colégio do Sol</footer>
     </div>
   );
 }
