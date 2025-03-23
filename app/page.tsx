@@ -53,7 +53,7 @@ export default function Home() {
           value={question}
           onChange={(e) => setQuestion(e.target.value)}
           placeholder="Exemplo: 'Qual o horário das aulas?'"
-          className="w-full p-3 rounded-xl text-black text-lg focus:outline-none"
+          className="w-full p-3 rounded-xl text-black text-lg focus:outline-none bg-gradient-to-r from from-transparent to-transparent border-2 border-gray-400 focus:border-yellow-500 transition"
         />
 
         
